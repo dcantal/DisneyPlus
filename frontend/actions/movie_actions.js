@@ -5,6 +5,7 @@ export const RECEIVE_MOVIE = "RECEIVE_MOVIE";
 export const REMOVE_MOVIE = "REMOVE_MOVIE";
 
 export const receiveMovies = (movies) => {
+    debugger
     return ({
         type: RECEIVE_MOVIES,
         movies
@@ -27,9 +28,15 @@ export const removeMovie = (movieId) => {
 
 
 export const fetchMovies = () => dispatch => {
+    debugger
     return (
-        MovieAPIUtil.fetchMovies().then((movies) => dispatch(receiveMovies(movies)))
-    );
+        MovieAPIUtil.fetchMovies().then((movies) => {
+            debugger
+            return (
+                dispatch(receiveMovies(movies))
+            );
+        }
+    ));
 };
 
 export const fetchMovie = (id) => dispatch => {

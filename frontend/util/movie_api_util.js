@@ -1,4 +1,5 @@
 export const fetchMovies = () => {
+    debugger
     return (
         $.ajax({
             method: 'GET',

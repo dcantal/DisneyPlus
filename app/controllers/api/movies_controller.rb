@@ -2,12 +2,13 @@
 class Api::MoviesController < ApplicationController
 
     def index
-        @groups = Movie.all
-
+        debugger
+        @movies = Movie.all
         render :index
     end
 
     def show
+        debugger
         @movie = Movie.find(params[:id])
         if @movie
             render :show
