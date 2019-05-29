@@ -18,13 +18,13 @@ class Browse extends React.Component {
                 <NavbarContainer/>
                 <div className="browse-page">
                     <StudiosIndexContainer/>
-                    <MoviesIndexContainer/>
+                    {/* <MoviesIndexContainer/>
                     <h1>Test1</h1>
                     <h1>Test2</h1>
                     <h1>Test3</h1>
                     <h1>Test4</h1>
                     <h1>Test5</h1>
-                    <h1>Test6</h1>
+                    <h1>Test6</h1> */}
                 </div>
             </div>
         );

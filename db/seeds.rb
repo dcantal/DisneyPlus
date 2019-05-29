@@ -8,9 +8,9 @@
 
 Studio.destroy_all
 
-Studio.create(title: "Disney", description: "Disney");
-Studio.create(title: "Pixar", description: "Pixar");
-Studio.create(title: "Marvel", description: "Marvel");
-Studio.create(title: "Lucasfilm", description: "Lucasfilm");
-Studio.create(title: "National Geographic", description: "National Geographic");
-Studio.create(title: "20th Century Fox", description: "20th Century Fox");
+Studio.create(title: "Disney", description: "Disney", photoUrl: "https://s3.amazonaws.com/disneyplus-dc-seeds/studio_logos/disney-logo.jpg");
+Studio.create(title: "Pixar", description: "Pixar", photoUrl: "https://s3.amazonaws.com/disneyplus-dc-seeds/studio_logos/Pixar-logo.jpg");
+Studio.create(title: "Marvel", description: "Marvel", photoUrl: "https://s3.amazonaws.com/disneyplus-dc-seeds/studio_logos/marvel-logo-png-transparent.png");
+Studio.create(title: "Lucasfilm", description: "Lucasfilm", photoUrl: "https://s3.amazonaws.com/disneyplus-dc-seeds/studio_logos/lucasfilm-logo.png");
+Studio.create(title: "National Geographic", description: "National Geographic", photoUrl: "https://s3.amazonaws.com/disneyplus-dc-seeds/studio_logos/national-geographic-logo-dark.png");
+Studio.create(title: "20th Century Fox", description: "20th Century Fox", photoUrl: "https://s3.amazonaws.com/disneyplus-dc-seeds/studio_logos/20th-century-fox-logo.jpg");

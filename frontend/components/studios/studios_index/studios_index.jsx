@@ -23,7 +23,9 @@ class StudiosIndex extends React.Component {
         });
         return (
             <div className="studio-list">
-                <h1>Studios</h1>
+                <div className="browse-section-stripe">
+                    <h1>Studios</h1>
+                </div>
                 <div className="studio-grid">
                     {studios}
                 </div>

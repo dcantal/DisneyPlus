@@ -4,7 +4,7 @@ export const RECEIVE_STUDIOS = "RECEIVE_STUDIOS";
 export const RECEIVE_STUDIO = "RECEIVE_STUDIO";
 export const REMOVE_STUDIO = "REMOVE_STUDIO";
 
-export const receiveSudios = (studios) => {
+export const receiveStudios = (studios) => {
     debugger
     return ({
         type: RECEIVE_STUDIOS,

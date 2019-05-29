@@ -251,7 +251,7 @@ var logout = function logout() {
 /*!********************************************!*\
   !*** ./frontend/actions/studio_actions.js ***!
   \********************************************/
-/*! exports provided: RECEIVE_STUDIOS, RECEIVE_STUDIO, REMOVE_STUDIO, receiveSudios, receiveStudio, removeStudio, fetchStudios, fetchStudio, createStudio, updateStudio, deleteStudio */
+/*! exports provided: RECEIVE_STUDIOS, RECEIVE_STUDIO, REMOVE_STUDIO, receiveStudios, receiveStudio, removeStudio, fetchStudios, fetchStudio, createStudio, updateStudio, deleteStudio */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -259,7 +259,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_STUDIOS", function() { return RECEIVE_STUDIOS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_STUDIO", function() { return RECEIVE_STUDIO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_STUDIO", function() { return REMOVE_STUDIO; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSudios", function() { return receiveSudios; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveStudios", function() { return receiveStudios; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveStudio", function() { return receiveStudio; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeStudio", function() { return removeStudio; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchStudios", function() { return fetchStudios; });
@@ -267,12 +267,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStudio", function() { return createStudio; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateStudio", function() { return updateStudio; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteStudio", function() { return deleteStudio; });
-/* harmony import */ var _util_studio_api_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/studio_api_util */ "./frontend/util/studio_api_util.js");
+/* harmony import */ var _util_studio_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/studio_api_util */ "./frontend/util/studio_api_util.js");
 
 var RECEIVE_STUDIOS = "RECEIVE_STUDIOS";
 var RECEIVE_STUDIO = "RECEIVE_STUDIO";
 var REMOVE_STUDIO = "REMOVE_STUDIO";
-var receiveSudios = function receiveSudios(studios) {
+var receiveStudios = function receiveStudios(studios) {
   debugger;
   return {
     type: RECEIVE_STUDIOS,
@@ -295,7 +295,7 @@ var removeStudio = function removeStudio(studioId) {
 var fetchStudios = function fetchStudios() {
   return function (dispatch) {
     debugger;
-    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_1__["fetchStudios"]().then(function (studios) {
+    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchStudios"]().then(function (studios) {
       debugger;
       return dispatch(receiveStudios(studios));
     });
@@ -303,28 +303,28 @@ var fetchStudios = function fetchStudios() {
 };
 var fetchStudio = function fetchStudio(id) {
   return function (dispatch) {
-    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_1__["fetchStudio"](id).then(function (studio) {
+    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchStudio"](id).then(function (studio) {
       return dispatch(receiveStudio(studio));
     });
   };
 };
 var createStudio = function createStudio(studio) {
   return function (dispatch) {
-    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_1__["createStudio"](studio).then(function (studio) {
+    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_0__["createStudio"](studio).then(function (studio) {
       return dispatch(receiveStudio(studio));
     });
   };
 };
 var updateStudio = function updateStudio(studio) {
   return function (dispatch) {
-    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_1__["updateStudio"](studio).then(function (studio) {
+    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_0__["updateStudio"](studio).then(function (studio) {
       return dispatch(receiveStudio(studio));
     });
   };
 };
 var deleteStudio = function deleteStudio(studioId) {
   return function (dispatch) {
-    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_1__["deleteStudio"](studioId).then(function () {
+    return _util_studio_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteStudio"](studioId).then(function () {
       return dispatch(removeStudio(studioId));
     });
   };
@@ -435,7 +435,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "browse-page"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_studios_studios_index_studios_index_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_movies_movies_index_movies_index_container__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Test1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Test2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Test3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Test4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Test5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Test6")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_studios_studios_index_studios_index_container__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
     }
   }]);
 
@@ -1301,7 +1301,9 @@ function (_React$Component) {
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "studio-list"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Studios"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "browse-section-stripe"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Studios")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "studio-grid"
       }, studios));
     }
@@ -1365,7 +1367,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var StudiosIndexItem = function StudiosIndexItem(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Studios Index Item");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "studio-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.studio.photoUrl
+  })) // <div className="studio-button" style={{backgroundImage: `url(${props.studio.photoUrl})`}}>
+  //     <h1>{props.studio.title}</h1>
+  //     <h1>{props.studio.photoUrl}</h1>
+  // </div>
+  ;
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (StudiosIndexItem);
