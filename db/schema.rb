@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_040108) do
+ActiveRecord::Schema.define(version: 2019_05_30_002746) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "episodes", force: :cascade do |t|
+    t.bigint "show_id"
+    t.string "title", null: false
+    t.text "description", null: false
+    t.integer "season", null: false
+    t.integer "episode", null: false
+    t.string "bannerUrl", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "videoUrl"
+    t.index ["description"], name: "index_episodes_on_description"
+    t.index ["show_id"], name: "index_episodes_on_show_id"
+    t.index ["title"], name: "index_episodes_on_title"
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string "title", null: false
@@ -22,10 +37,28 @@ ActiveRecord::Schema.define(version: 2019_05_29_040108) do
     t.integer "year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "posterUrl"
+    t.string "bannerUrl"
+    t.string "videoUrl"
     t.index ["description"], name: "index_movies_on_description"
     t.index ["rating"], name: "index_movies_on_rating"
     t.index ["title"], name: "index_movies_on_title"
     t.index ["year"], name: "index_movies_on_year"
+  end
+
+  create_table "shows", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.string "rating", null: false
+    t.integer "year", null: false
+    t.string "posterUrl", null: false
+    t.string "bannerUrl", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["description"], name: "index_shows_on_description"
+    t.index ["rating"], name: "index_shows_on_rating"
+    t.index ["title"], name: "index_shows_on_title"
+    t.index ["year"], name: "index_shows_on_year"
   end
 
   create_table "studios", force: :cascade do |t|
@@ -49,4 +82,5 @@ ActiveRecord::Schema.define(version: 2019_05_29_040108) do
     t.index ["username"], name: "index_users_on_username"
   end
 
+  add_foreign_key "episodes", "shows"
 end

@@ -22,9 +22,11 @@ class MoviesIndex extends React.Component {
             );
         });
         return (
-            <div className="movie-list">
-                <h1>Movies</h1>
-                <div className="movie-grid">
+            <div className="studio-list">
+                <div className="browse-section-stripe">
+                    <h1>Movies</h1>
+                </div>
+                <div className="studio-grid">
                     {movies}
                 </div>
             </div>

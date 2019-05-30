@@ -22,7 +22,7 @@
 
 .studio-grid {
     display: flex;
-    height: 200px;
+    height: 150px;
 }
 
 .studio-button {
@@ -37,6 +37,15 @@
     box-sizing: border-box;
 }
 
+.studio-button-link {
+    width: 250px;
+    height: 150px;
+    border-radius: 6px;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
+    box-sizing: border-box;
+}
+
 .studio-button > img {
     max-height: 100%;
     max-width: 100%;
@@ -46,9 +55,18 @@
     transform: translateX(-25%);
 }
 
+.studio-grid:hover .studio-button-link {
+    transform: translateX(-25%);
+}
+
 .studio-button:hover ~ .studio-button {
     transform: translateX(25%);
 }
+
+.studio-button-link:hover ~ .studio-button-link {
+    transform: translateX(25%);
+}
+
 
 .studio-button:hover {
     transform: scale(1.5) !important;

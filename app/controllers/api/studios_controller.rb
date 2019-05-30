@@ -46,6 +46,6 @@ class Api::StudiosController < ApplicationController
     private
 
     def studio_params
-        params.require(:studio).permit(:title, :description, :photo)
+        params.require(:studio).permit(:title, :description, :photo, :photoUrl)
     end
 end
