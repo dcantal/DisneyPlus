@@ -11,16 +11,16 @@ const MoviesIndexItem = props => {
             </div>
         </Link>
 
-//working video player
+//working video player code below
 
-        // <Video
-        //     controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
-        //     poster={props.movie.bannerUrl}
-        //     onCanPlayThrough={() => {
-        //         // Do stuff
-        //     }}>
-        //     <source src={props.movie.videoUrl} type="video/webm" />
-        // </Video>
+    //     <Video
+    //         controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+    //         poster={props.movie.bannerUrl}
+    //         onCanPlayThrough={() => {
+    //             // Do stuff
+    //         }}>
+    //         <source src={props.movie.videoUrl} type="video/webm" />
+    //     </Video>
     )
 }
 

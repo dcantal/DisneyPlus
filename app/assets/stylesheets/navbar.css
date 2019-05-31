@@ -33,7 +33,19 @@
     height: 100%;
 }
 
-.navbar-link {
+.navbar-link > h1 {
     margin: 0px;
     /* margin-bottom: 5px; */
+}
+
+.navbar-link {
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    cursor: pointer;
+}
+
+.navbar-link:visited {
+    color: inherit;
 }

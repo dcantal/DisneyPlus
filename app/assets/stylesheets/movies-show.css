@@ -1,0 +1,68 @@
+.movie-show-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fafafa;
+    height: 1500px;
+}
+
+.movie-show-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 600px;
+}
+
+.movie-show-banner-content {
+    background: rgb(38,4,150);
+    background: linear-gradient(90deg, rgba(38,4,150,1) 0%, rgba(67,10,173,0.6811099439775911) 42%, rgba(30,6,167,0) 100%);
+    display: flex;
+    height: 100%;
+    padding: 50px;
+    padding-top: 200px;
+    box-sizing: border-box;
+    align-items: flex-end;
+}
+
+.movie-show-poster-image {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.movie-poster-image {
+    max-width: 300px;
+}
+
+
+.movie-show-banner-details {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.movie-title {
+    font-size: 40px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.movie-show-banner-small-details {
+    display: flex;
+}
+
+.movie-show-banner-small-details > h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.movie-description {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.movie-show-actions-strip {
+    display: flex;
+}

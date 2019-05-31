@@ -41,12 +41,12 @@ class NavBar extends React.Component {
         return (
             <div className="navbar">
                 <div className="navbar-left">
-                    <img id="logo-navbar" src="https://s3.amazonaws.com/disneyplus-dc-seeds/disney_plus_logo.png" />
-                    <h1 className="navbar-link">BROWSE</h1>
+                    <Link to="/browse"><img id="logo-navbar" src="https://s3.amazonaws.com/disneyplus-dc-seeds/disney_plus_logo.png" /></Link>
+                    <Link to="/browse" className="navbar-link"><h1 >BROWSE</h1></Link>
                 </div>
                 <div className="navbar-right">
-                    <h1 className="navbar-link">SEARCH</h1>
-                    <h1 className="navbar-link">DANTE</h1>
+                    <Link to="/browse" className="navbar-link"><h1 >SEARCH</h1></Link>
+                    <Link to="/browse" className="navbar-link"><h1 >DANTE</h1></Link>
                 </div>
             </div>
         )
