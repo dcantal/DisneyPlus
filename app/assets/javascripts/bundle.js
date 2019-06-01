@@ -579,7 +579,9 @@ function (_React$Component) {
         className: "studio-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "browse-section-stripe"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Movies")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "browse-section-label"
+      }, "MOVIES >")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "studio-grid"
       }, movies));
     }
@@ -650,14 +652,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MoviesIndexItem = function MoviesIndexItem(props) {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "browse-content-item"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     to: "/movies/".concat(props.movie.id),
     className: "studio-button-link"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "studio-button"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: props.movie.bannerUrl
-  }))) //working video player code below
+    className: "studio-button",
+    style: {
+      backgroundImage: "url(".concat(props.movie.bannerUrl, ")")
+    }
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/movies/".concat(props.movie.id)
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
+    className: "browse-content-title"
+  }, props.movie.title))) //working video player code below
   //     <Video
   //         controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
   //         poster={props.movie.bannerUrl}
@@ -1476,7 +1485,9 @@ function (_React$Component) {
         className: "studio-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "browse-section-stripe"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Studios")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "browse-section-label"
+      }, "STUDIOS >")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "studio-grid"
       }, studios));
     }
@@ -1544,10 +1555,11 @@ var StudiosIndexItem = function StudiosIndexItem(props) {
     to: "/studios/".concat(props.studio.id),
     className: "studio-button-link"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "studio-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: props.studio.photoUrl
-  })));
+    className: "studio-button",
+    style: {
+      backgroundImage: "url(".concat(props.studio.photoUrl, ")")
+    }
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (StudiosIndexItem);

@@ -5,11 +5,17 @@ import { Link } from 'react-router-dom';
 
 const MoviesIndexItem = props => {
     return (
-        <Link to={`/movies/${props.movie.id}`} className="studio-button-link">
-            <div className="studio-button">
-                <img src={props.movie.bannerUrl}></img>
-            </div>
-        </Link>
+        <div className="browse-content-item">
+            <Link to={`/movies/${props.movie.id}`} className="studio-button-link">
+                <div className="studio-button" style={{ backgroundImage: `url(${props.movie.bannerUrl})` }}>
+                    {/* <img src={props.movie.bannerUrl}></img> */}
+                </div>
+            </Link>
+            <Link to={`/movies/${props.movie.id}`}>
+                <h1 className="browse-content-title">{props.movie.title}</h1>
+            </Link> 
+        </div>
+
 
 //working video player code below
 

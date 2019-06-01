@@ -9,15 +9,23 @@
     background-color: white;
 }
 
+.browse-section-label {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    color: rgb(41, 44, 51);
+}
+
 .studio-list {
     display: flex;
     flex-direction: column;
 }
 
 .browse-section-stripe {
-    margin-bottom: 80px;
     width: 100%;
-    height: 50px;
 }
 
 .studio-grid {
@@ -35,6 +43,20 @@
     margin: 0 2px;
     transition: transform 300ms ease 100ms;
     box-sizing: border-box;
+    background-size: cover;
+    /* background-size: 100% 100%; */
+}
+
+.browse-content-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.browse-content-title {
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 5px;
+    color: rgb(41, 44, 51);
 }
 
 .studio-button-link {

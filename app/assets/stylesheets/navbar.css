@@ -1,3 +1,11 @@
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color:  inherit;
+}
+
 #logo-navbar {
      max-width: 80px;
      /* max-height: 86.63px; */
@@ -38,14 +46,9 @@
     /* margin-bottom: 5px; */
 }
 
-.navbar-link {
-    text-decoration: none;
-}
+
 
 .navbar-link:hover {
     cursor: pointer;
 }
 
-.navbar-link:visited {
-    color: inherit;
-}

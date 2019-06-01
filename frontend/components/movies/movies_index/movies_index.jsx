@@ -24,7 +24,7 @@ class MoviesIndex extends React.Component {
         return (
             <div className="studio-list">
                 <div className="browse-section-stripe">
-                    <h1>Movies</h1>
+                    <h1 className="browse-section-label">MOVIES ></h1>
                 </div>
                 <div className="studio-grid">
                     {movies}
